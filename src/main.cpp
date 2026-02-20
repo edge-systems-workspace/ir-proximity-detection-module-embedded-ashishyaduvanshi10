@@ -8,4 +8,13 @@ void setup() {
 }
 
 void loop() {
+  int irValue = digitalRead(IR_PIN);
+
+  if (irValue == LOW) {
+    Serial.println("Object Detected");
+  } else {
+    Serial.println("No Object");
+  }
+
+  delay(200);
 }
